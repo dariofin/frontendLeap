@@ -1,26 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="./src/assets/df_logotipo_darkmode.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="social-card.css" />
+
+  <title>Proyecto</title>
 </head>
+
 <body>
-<article class="social-content">
-<section class="profile-content">
-    <img src="#" alt="Profile avatar" class="profile-content__avatar" />
-    <h2 class="profile-content__name">MetaMask</h2>
-    <h3 class="profile-content__user">@metaMask</h3>
-    <p class="profile-contentn__description">description</p>
-    <div class="profile-content_buttons-content">
-        <button class="profile-content_button-link"></button><button class="profile-content_button-link"></button><button class="profile-content_button-link"></button><button class="profile-content_button-link"></button>
-    </div>
-</section>
-<section class="followers content"></section>
+  <article class="social-card">
+    <section class="profile-content">
+      <img src="/Project-002-df_dev/img/profile-picture.jpg" alt="Profile avatar" class="profile-content__avatar" />
+      <h2 class="profile-content__name">MetaMask</h2>
+      <h3 class="profile-content__user">@metaMask</h3>
+      <p class="profile-content__description">MetaMask brings Ethereum to your web browser</p>
 
+      <nav class="profile-content_buttons-content">
+        <button class="profile-content_button-link--gh">
+          <img src="/Project-002-df_dev/img/icon-github.svg" alt="Github icon" /></button>
 
-</article>
+        <button class="profile-content_button-link--in">
+          <img src="/Project-002-df_dev/img/icon-linkedin.svg" alt="Linkedin icon" /></button>
 
-    
+        <button class="profile-content_button-link--gl">
+          <img src="/Project-002-df_dev/img/icon-gitlab.svg" alt="GitLab icon" /></button>
+
+        <button class="profile-content_button-link--et">
+          <img src="/Project-002-df_dev/img/icon-ethereum.svg" alt="Etherum icon" />
+        </button>
+      </nav>
+
+    </section>
+    <section class="followers-content">
+      <div class="followers-content__org-counter">
+        6/8 Organizations <img src="/Project-002-df_dev/img/icon-info.svg">
+      </div>
+
+      <progress class="followers-content__progressbar" max="8" value="6"></progress>
+
+      <p class="followers-content__counter"><span>4K</span> Followers</p>
+      <button class="followers-content__button">Follow</button>
+    </section>
+  </article>
 </body>
+
 </html>
