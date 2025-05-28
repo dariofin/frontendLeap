@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* testeo visual */
+section {
+    border: solid 1px;
+}
+
+/* fin testeo */
+
+
+/* letra poppins */
+
+
+body {
+    height: 100vh;
+
+    background-color: #eef2f9;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.productCard {
+    width: 887px;
+    height: 661px;
+    padding: 82px;
+
+
+
+    background-color: white;
+    box-shadow: 0px 24px 68px -9px rgb(0.7 0.7 0.85 / 0.20);
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: space-between;
+
+
+}
