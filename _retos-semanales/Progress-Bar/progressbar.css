@@ -8,12 +8,16 @@
 body {
     height: 100vh;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: #e0e2f6;
     font-family: "Inter", sans-serif;
 
+}
+
+a {
+    color: #232A70;
 }
 
 header {
@@ -25,6 +29,10 @@ header {
     width: 1013px;
     height: 257px;
     padding: 72px;
+
+    margin: 50px 0;
+
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -146,5 +154,6 @@ header {
 }
 
 footer {
+    text-align: center;
     font-size: 14px;
 }
