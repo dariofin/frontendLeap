@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e2f6;
+    font-family: "Inter", sans-serif;
+
+}
+
+.progress-card {
+    position: relative;
+    width: 1013px;
+    height: 257px;
+    padding: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: #fff;
+    border-radius: 70px;
+    box-shadow: 0px 15px 50px -20px rgba(0, 0, 0, 0.15);
+}
+
+.progress-card__shadow {
+    width: 857px;
+    height: 323px;
+    position: absolute;
+    display: block;
+    top: -30px;
+    border-radius: 60px;
+    background-color: #F6EDE0;
+    z-index: -1;
+    box-shadow: 1px 10px 40px -10px rgba(0, 0, 0, 0.1);
+}
+
+.cardbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+
+    /* background-color: aqua; */
+}
+
+.cardbox__steps {
+    width: 100%;
+    height: auto;
+    max-width: 870px;
+
+    background: #fff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 32px;
+}
+
+
+.cardbox__steps__step {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 70px;
+    background-color: #fff;
+    border: solid 1px transparent;
+
+}
+
+.cardbox__steps__step:hover {
+    /* background-color: #dcdef5; */
+    border-bottom-color: #232A70;
+    cursor: pointer;
+}
+
+.cardbox__steps__number {
+    width: 39px;
+    height: 39px;
+    text-align: center;
+    color: #232A70;
+    border: solid 1px #232A70;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    border-radius: 100%;
+    margin-bottom: 8px;
+    user-select: none;
+
+
+}
+
+.done {
+    background-color: #232A70;
+    color: white;
+
+}
+
+.cadrbox__steps__title {
+    font-size: 18px;
+    font-weight: 600;
+    user-select: none;
+}
+
+
+
+
+/* Remove default appearance for all browsers */
+.cardbox__progressbar {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+
+
+.cardbox__progressbar {
+    width: 100%;
+    height: 12px;
+}
+
+.cardbox__progressbar::-webkit-progress-bar {
+    background: #E0E2F6;
+    border-radius: 20px;
+}
+
+.cardbox__progressbar::-webkit-progress-value {
+    background: #232A70;
+    /* color del value */
+    border-radius: 20px;
+    transition: width 0.3s;
+}
