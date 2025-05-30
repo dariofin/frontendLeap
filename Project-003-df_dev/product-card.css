@@ -5,9 +5,7 @@
 }
 
 /* testeo visual */
-section {
-    border: solid 1px;
-}
+/* section {    border: solid 1px;} */
 
 /* fin testeo */
 
@@ -44,6 +42,7 @@ body {
 }
 
 .productCard__info {
+    width: 442px;
     display: flex;
     flex-direction: column;
 
@@ -116,6 +115,7 @@ body {
 }
 
 .productCard__info__stock {
+    font-size: 14px;
     display: flex;
     align-items: center;
     margin-bottom: 32px;
@@ -123,17 +123,22 @@ body {
 
 .productCard__actions {
     display: flex;
+    gap: 10px;
 }
 
 .productCard__actions__btn {
+
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 10px;
+
     flex-grow: 1;
     padding: 16px;
     border-radius: 8px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: #c9c9da;
+    border: solid 2px #c9c9da;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    background-color: #fff;
+    padding: 16px;
 }
