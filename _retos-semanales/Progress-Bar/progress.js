@@ -1,4 +1,4 @@
-// capturo todoso los botone de los pasos
+// capturo todoso los botones de los pasos
 let selectbtn = document.getElementsByClassName("cardbox__steps__step");
 console.log(selectbtn);
 
@@ -63,7 +63,7 @@ function Done() {
 
 
     function addDoneStyle(num) {
-            for(let i=0; i<num; i++){
+            for(let i=1; i<num; i++){
         spans[i].classList.add("done");
 }
 
@@ -79,3 +79,5 @@ function Done() {
 //     console.log(progressbar.attributes.max.value)
 //    
 // }
+
+
