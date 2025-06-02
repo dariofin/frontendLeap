@@ -1,8 +1,4 @@
 .DS_Store
 .idea/
 node_modules/
-.json
-.prettierrc
-.stylelintrc
-package-lock.json
-package.json
+*_figma/
