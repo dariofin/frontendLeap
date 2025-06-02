@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: system-ui, sans-serif;
   display: flex;
@@ -42,6 +43,7 @@ section {
   height: 30px;
   background-color: grey;
 }
+
 .red {
   background-color: red;
   margin-top: auto;

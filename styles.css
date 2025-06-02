@@ -1,83 +1,76 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    background-color: #edf2fa;
-    padding: 50px;
-    align-items: center;
-    text-align: center;
-    user-select: none;
-    font-family: -apple-system, BlinkMacSystemFont,
-        "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif,
-        "Apple Color Emoji", "Segoe UI Emoji";
-
+  display: flex;
+  flex-direction: column;
+  background-color: #edf2fa;
+  padding: 50px;
+  align-items: center;
+  text-align: center;
+  user-select: none;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
-h1 {
-    color: #122d6c;
-    margin: 15px 0;
+.header__icon {
+  max-width: 32px;
 }
 
-h2 {
-    color: #1d3d85;
-    border-bottom: solid 1px #f06a1f8d;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+.main-title {
+  color: #122d6c;
+  margin: 15px 0;
 }
 
-
-a {
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-    color: inherit;
-    padding: 10px;
-
-    &:hover {
-        background-color: #f9fbff;
-    }
-
-    &:visited {
-        color: #4c5684;
-    }
+.header__nav,
+.cards__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.header__link,
+.cards__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #0c2086;
+  padding: 1rem;
+  font-size: 0.8rem;
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+.header__link:hover,
+.cards__link:hover {
+  background-color: #f9fbff;
 }
 
-
-
-
-nav a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    color: #0c2086;
-
+.cards {
+  width: auto;
+  max-width: 900px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px -8px #0000001a;
+  padding: 40px;
+  margin: 50px;
+  text-align: center;
+  font-weight: 400;
 }
 
-nav a img {
-    max-width: 128px;
-    min-width: 24px;
+.cards__title {
+  color: #1d3d85;
+  border-bottom: solid 1px #f06a1f8d;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
-section {
-    width: auto;
-    max-width: 900px;
-    background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 0 4px 24px -8px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    margin: 50px;
-    text-align: center;
+.cards__icon {
+  max-width: 96px;
+  min-width: 24px;
+  margin-bottom: 4px;
 }
