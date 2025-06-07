@@ -37,9 +37,9 @@ body {
   width: 100%;
   height: 100%;
   /* display: grid; */
-  /* padding: 120px; */
+  padding: 120px;
   background-color: #ffffff;
-  border: solid 1px greenyellow;
+  /* border: solid 1px greenyellow; */
 
   /* 
   grid-template-areas:
@@ -54,7 +54,7 @@ body {
 .divisor3 {
   width: 672px;
   /* height: 289px; */
-  border: solid 2px salmon;
+  /* border: solid 1px salmon; */
   margin: 5px 0;
 }
 
@@ -63,14 +63,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 98px;
+  /* gap: 98px; */
 }
 
 .testimonial-card__container {
   /* display: flex; */
   /* flex-wrap: wrap; */
   width: 100%;
-  border: solid 4px yellow;
+  /* border: solid 4px yellow; */
 }
 
 .avatar {
@@ -78,20 +78,26 @@ body {
   /* background-color: darkgoldenrod; */
   width: auto;
   height: auto;
-  /* padding-right: 98px; */
+  /* border: solid 1px; */
 }
 
 .testimony {
-  /* max-width: 420px; */
+  max-width: 440px;
   line-height: 137%;
-  font-size: 24px;
-  text-align: left;
-  display: inline-block;
-  /* background-color: aqua; */
-  /* max-width: 50%; */
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 43px;
+  /* text-align: left; */
+  /* display: inline-block; */
+  /* border: solid 1px; */
 }
 .divisor2 {
-  align-items: center;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 25px;
+  /* border: solid 1px #ccc; */
+
+  /* align-items: center; */
 }
 .testimonial-card__pages {
   /* background-color: #1d5f5b; */
@@ -101,13 +107,50 @@ body {
 .pages-point {
   width: 11px;
   height: 11px;
-  background-color: black;
+  background-color: #e3f0ef;
   border-radius: 50%;
   margin-right: 10px;
 }
+.pages-point--selected {
+  background-color: black;
+}
 
+.line-divisor {
+  width: 100%;
+  border: solid 2px #000;
+  margin-bottom: 22px;
+}
 .avatar,
 .testimony,
 .testimony__autor {
   /* border: solid 2px green; */
+}
+
+.testimony__autor {
+  text-align: left;
+}
+.navigation {
+  display: flex;
+  gap: 20px;
+}
+.navigaton__arrows {
+  border: none;
+  background: none;
+  width: 44px;
+  /* height: 44px; */
+  cursor: pointer;
+}
+.navigaton__arrows :hover {
+  stroke: red;
+}
+.arrow {
+  width: 12px;
+  fill: none;
+  stroke: #000;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.75px;
+}
+
+.right-arrow {
 }
