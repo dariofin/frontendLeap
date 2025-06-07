@@ -9,7 +9,9 @@ body {
   font-weight: 400;
   font-style: normal;
 }
-
+.none {
+  display: none;
+}
 .testimonial-main {
   display: flex;
   justify-content: center;
@@ -32,12 +34,12 @@ body {
 .testimonial-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 100%;
   /* display: grid; */
-  padding: 120px;
+  padding: 120px 120px 80px 120px;
   background-color: #ffffff;
   /* border: solid 1px greenyellow; */
 
@@ -49,7 +51,7 @@ body {
 
   /* border: solid 3px purple; */
 }
-.divisor1,
+.testimonies,
 .divisor2,
 .divisor3 {
   width: 672px;
@@ -58,7 +60,7 @@ body {
   margin: 5px 0;
 }
 
-.divisor1,
+.testimonies,
 .divisor2 {
   display: flex;
   justify-content: space-between;
@@ -99,7 +101,7 @@ body {
 
   /* align-items: center; */
 }
-.testimonial-card__pages {
+.testimonial-card__pagination {
   /* background-color: #1d5f5b; */
   display: flex;
   align-items: center;
@@ -120,11 +122,6 @@ body {
   border: solid 2px #000;
   margin-bottom: 22px;
 }
-.avatar,
-.testimony,
-.testimony__autor {
-  /* border: solid 2px green; */
-}
 
 .testimony__autor {
   text-align: left;
@@ -140,11 +137,9 @@ body {
   /* height: 44px; */
   cursor: pointer;
 }
-.navigaton__arrows :hover {
-  stroke: red;
-}
 .arrow {
   width: 12px;
+  /* padding: 5px; */
   fill: none;
   stroke: #000;
   stroke-linecap: round;
@@ -152,5 +147,6 @@ body {
   stroke-width: 2.75px;
 }
 
-.right-arrow {
+.navigaton__arrows :hover {
+  stroke: red;
 }
