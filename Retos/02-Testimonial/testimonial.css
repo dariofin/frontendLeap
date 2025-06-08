@@ -38,49 +38,26 @@ body {
   align-items: center;
   width: 100%;
   height: 100%;
-  /* display: grid; */
   padding: 120px 120px 80px 120px;
-  background-color: #ffffff;
-  /* border: solid 1px greenyellow; */
-
-  /* 
-  grid-template-areas:
-    " avatar text"
-    "pages autor"
-    "arrows arrows"; */
-
-  /* border: solid 3px purple; */
-}
-.testimonies,
-.divisor2,
-.divisor3 {
-  width: 672px;
-  /* height: 289px; */
-  /* border: solid 1px salmon; */
-  margin: 5px 0;
+  background-color: #fff;
 }
 
-.testimonies,
-.divisor2 {
+.card-header,
+.card-row,
+.card-footer {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  /* gap: 98px; */
 }
 
 .testimonial-card__container {
-  /* display: flex; */
-  /* flex-wrap: wrap; */
   width: 100%;
-  /* border: solid 4px yellow; */
 }
 
 .avatar {
-  /* display: inline-block; */
-  /* background-color: darkgoldenrod; */
   width: auto;
   height: auto;
-  /* border: solid 1px; */
 }
 
 .testimony {
@@ -89,64 +66,72 @@ body {
   font-size: 26px;
   font-weight: 400;
   margin-bottom: 43px;
-  /* text-align: left; */
-  /* display: inline-block; */
-  /* border: solid 1px; */
 }
-.divisor2 {
+.card-row {
   display: flex;
   align-items: flex-end;
   margin-bottom: 25px;
-  /* border: solid 1px #ccc; */
-
-  /* align-items: center; */
 }
-.testimonial-card__pagination {
-  /* background-color: #1d5f5b; */
+.dots-box {
   display: flex;
   align-items: center;
 }
-.pages-point {
+.dot {
   width: 11px;
   height: 11px;
   background-color: #e3f0ef;
   border-radius: 50%;
   margin-right: 10px;
+  cursor: pointer;
+  transition: all 1s;
+
+  &:hover {
+    scale: 1.3;
+    background-color: #007ac3;
+    transition: all 0.1s;
+  }
 }
-.pages-point--selected {
+.dot--select {
   background-color: black;
 }
 
 .line-divisor {
   width: 100%;
-  border: solid 2px #000;
+  border: solid 1.5px #000;
   margin-bottom: 22px;
 }
 
-.testimony__autor {
-  text-align: left;
+.testimony__autor__name {
+  display: block;
 }
+
 .navigation {
   display: flex;
   gap: 20px;
+  position: relative;
+  bottom: 0px;
 }
 .navigaton__arrows {
   border: none;
   background: none;
   width: 44px;
-  /* height: 44px; */
   cursor: pointer;
+  transition: scale 1s;
+
+  &:hover {
+    scale: 1.3;
+    transition: all 0.1s;
+  }
 }
 .arrow {
   width: 12px;
-  /* padding: 5px; */
   fill: none;
   stroke: #000;
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke-width: 2.75px;
-}
-
-.navigaton__arrows :hover {
-  stroke: red;
+  stroke-width: 3px;
+  &:hover {
+    stroke: #007ac3;
+    stroke-width: 4px;
+  }
 }

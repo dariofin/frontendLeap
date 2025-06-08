@@ -3,25 +3,19 @@ const testimony00 =
   "Eaque voluptatem a quibusdam illum perferendis magni dolor atque quam unde quis reprehenderit";
 const testimony01 =
   "Very simple to use, great automation and keeps me on track with all I need to do. I also like that it can be shared with others.";
-
 const testimony02 =
   "Dugit odit nesciunt rerum molestias! Natus laboriosam error tempore soluta debitis maiores ratione officia velit.";
-
 const testimony03 =
   "Quidem inventore harum eius cupiditate minus quos hic vitae quia eum iure. I also like that it can ";
 
 const testimoniesArray = [testimony00, testimony01, testimony02, testimony03];
 
 const autorsArray = [
-  "TERRY IVANS1",
-  "TERRY IVANS",
-  "JACK PALACE ",
-  "CRISTIAN ANDAERS",
+  ["LUCAS TERRY ", "Hasn't Heart"],
+  ["TERRY IVANS", "Project Manager"],
+  ["JACK PALANCE", "Believe it or not"],
+  ["SKA -P", "Check to the king"],
 ];
-// OBTENGO LOS ELEMENTOS NECESARIOS
-// const testimonyText = document.getElementById("testimony01");
-// testimonyText.textContent = testimony01;
-// console.log(testimonyText.textContent);
 
 let counter = 1;
 
@@ -30,75 +24,56 @@ const testimonyTxt = document.getElementById("testimony");
 testimonyTxt.innerHTML = testimoniesArray[counter];
 
 // obtengo el autor
-const testimonyAutor = document.getElementById("testimony-autor");
-console.log(testimonyAutor.children[1].textContent);
+const testimonyAutor = document.getElementById("author-name");
+testimonyAutor.innerHTML = autorsArray[counter][0];
+
+// obtengo el rol del autor
+const testimonyRole = document.getElementById("author-role");
+testimonyRole.innerHTML = autorsArray[counter][1];
 
 // obtengo la paginación de puntos
-const pagination = document.getElementsByClassName("pages-point");
-// console.log(pagination[counter].classList.value);
+const pagesPoints = Array.from(document.getElementsByClassName("dot"));
+// agrego add Listener a los pagesPoints
+pagesPoints.forEach((point) => {
+  //   console.log(point);
+  point.addEventListener("click", navPage);
+});
 
-//recorrerlo y cambiar la clase cuando se haga click en la navegación
-
-// obtengo la navegación
+// obtengo la navegación de las flechas
 const navArrows = document.getElementsByClassName("navigaton__arrows");
-// console.log(navArrows);
-
-// agrego add Listener a los botones
+// agrego add Listener a los botones flecha
 Array.from(navArrows).forEach((btn) => {
-  //   console.log(btn);
   btn.addEventListener("click", navigate);
 });
 
+function navPage(event) {
+  //capturo el último dígito del ID para usarlo como index page
+  let page = event.currentTarget.id.slice(-1);
+  changePage(page);
+  counter = page;
+}
+
 function navigate(event) {
-  // identifico el boton clickeado
+  // identifico ID del boton clickeado
   let idEvent = event.currentTarget.id;
 
   if (idEvent === "right-arrow") {
-    // nextPage(counter);
-
-    if (counter < 3) {
-      counter++;
-      nextPage(counter);
-    } else {
-      testimonyTxt.innerHTML = testimoniesArray[0];
-
-      testimonyAutor.innerHTML = autorsArray[0];
-      counter = 0;
-      nextPage(counter);
-      console.log("counter es +: " + counter);
-    }
-  } else if (idEvent === "left-arrow") {
-    if (counter > 0) {
-      counter--;
-      prevPage(counter);
-    } else {
-      counter = 3;
-      console.log("counter es: " + counter);
-      prevPage(counter);
-    }
+    counter < 3 ? counter++ : (counter = 0);
+    changePage(counter);
+  }
+  if (idEvent === "left-arrow") {
+    counter > 0 ? counter-- : (counter = 3);
+    changePage(counter);
   }
 }
 
-function nextPage(page) {
+function changePage(page) {
   testimonyTxt.innerHTML = testimoniesArray[page];
-  testimonyAutor.textContent = autorsArray[page];
-  console.log(testimonyAutor);
-  //   console.log(pagination[counter].classList.value);
-  Array.from(pagination).forEach((el) =>
-    el.classList.remove("pages-point--selected"),
-  );
-  pagination[counter].classList.add("pages-point--selected");
-  //   pagination[counter].classList.add("pages-point--selected");
-}
+  testimonyAutor.innerHTML = autorsArray[page][0];
+  testimonyRole.innerHTML = autorsArray[page][1];
 
-function prevPage(page) {
-  testimonyTxt.innerHTML = testimoniesArray[page];
-  testimonyAutor.textContent = autorsArray[page];
+  pagesPoints.forEach((el) => el.classList.remove("dot--select"));
+  pagesPoints[page].classList.add("dot--select");
 
-  console.log(pagination[counter].classList.value);
-  Array.from(pagination).forEach((el) =>
-    el.classList.remove("pages-point--selected"),
-  );
-  pagination[counter].classList.add("pages-point--selected");
-  //   pagination[counter].classList.add("pages-point--selected");
+  console.log("PÁGINA " + (page + 1));
 }
