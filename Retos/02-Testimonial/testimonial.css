@@ -51,6 +51,10 @@ body {
   align-items: flex-start;
 }
 
+.card-header {
+  overflow: hidden;
+}
+
 .testimonial-card__container {
   width: 100%;
 }
@@ -61,12 +65,39 @@ body {
 }
 
 .testimony {
+  position: relative;
   max-width: 440px;
   line-height: 137%;
   font-size: 26px;
   font-weight: 400;
   margin-bottom: 43px;
+  left: 0;
+  opacity: 1;
+
+  transition:
+    left 0.5s,
+    right 0.5s,
+    opacity 0.25s;
 }
+
+/* animación de entrada y salida de los testimonios */
+.inside {
+  display: inline-block;
+  left: 0;
+  opacity: 50%;
+}
+
+.enter {
+  right: 0%;
+  opacity: 1;
+  /* transition: right 1s; */
+}
+
+.outer {
+  left: 100%;
+  opacity: 0;
+}
+
 .card-row {
   display: flex;
   align-items: flex-end;
