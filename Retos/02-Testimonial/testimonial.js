@@ -10,7 +10,7 @@ const testimony03 =
 
 const testimoniesArray = [testimony00, testimony01, testimony02, testimony03];
 
-const autorsArray = [
+const authorsArray = [
   ["LUCAS TERRY ", "Hasn't Heart"],
   ["TERRY IVANS", "Project Manager"],
   ["JACK PALANCE", "Believe it or not"],
@@ -23,13 +23,18 @@ let counter = 1;
 const testimonyTxt = document.getElementById("testimony01");
 testimonyTxt.innerHTML = testimoniesArray[counter];
 
+//obtengo el contenedor del autor
+const testimonyAuthor = document.getElementById("testimony-author");
+
 // obtengo el autor
-const testimonyAutor = document.getElementById("author-name");
-testimonyAutor.innerHTML = autorsArray[counter][0];
+const testimoyAuthorName = document.getElementById("author-name");
+// console.log(testimoyAuthorName.innerHTML);
+testimoyAuthorName.innerHTML = authorsArray[counter][0];
 
 // obtengo el rol del autor
 const testimonyRole = document.getElementById("author-role");
-testimonyRole.innerHTML = autorsArray[counter][1];
+// console.log(testimonyRole.innerHTML);
+testimonyRole.innerHTML = authorsArray[counter][1];
 
 // obtengo la paginación de puntos
 const pagesPoints = Array.from(document.getElementsByClassName("dot"));
@@ -37,7 +42,6 @@ const pagesPoints = Array.from(document.getElementsByClassName("dot"));
 pagesPoints.forEach((point) => {
   //   console.log(point);
   point.addEventListener("click", navPage);
-
   point.addEventListener("mouseup", enterNext);
 });
 
@@ -73,19 +77,22 @@ function navigate(event) {
 function changePage(page) {
   //   inOutAnimate(page);
   testimonyTxt.innerHTML = testimoniesArray[page];
-  testimonyAutor.innerHTML = autorsArray[page][0];
-  testimonyRole.innerHTML = autorsArray[page][1];
+  testimoyAuthorName.innerHTML = authorsArray[page][0];
+  testimonyRole.innerHTML = authorsArray[page][1];
 
   pagesPoints.forEach((el) => el.classList.remove("dot--select"));
   pagesPoints[page].classList.add("dot--select");
 
   console.log("PÁGINA " + (page + 1));
   testimonyTxt.classList.add("outer");
+  testimonyAuthor.classList.remove("opacity1");
+  testimonyAuthor.classList.add("opacity0");
   enterNext();
 }
 function enterNext() {
   setTimeout(() => {
     testimonyTxt.classList.remove("outer");
     testimonyTxt.classList.add("enter");
-  }, 500); // 1000 ms = 1 segundo
+    testimonyAuthor.classList.add("opacity1");
+  }, 300);
 }

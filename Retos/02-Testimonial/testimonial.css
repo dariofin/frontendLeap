@@ -131,8 +131,17 @@ body {
   border: solid 1.5px #000;
   margin-bottom: 22px;
 }
+.opacity0 {
+  opacity: 0;
+}
+.opacity1 {
+  opacity: 1;
+  transition: opacity 400ms;
+}
 
-.testimony__autor__name {
+.testimony__author {
+}
+.testimony__author__name {
   display: block;
 }
 
