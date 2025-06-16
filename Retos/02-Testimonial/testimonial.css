@@ -12,6 +12,11 @@ body {
   font-weight: 400;
   background-color: #e2f0ef;
 }
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
 .none {
   display: none;
 }
